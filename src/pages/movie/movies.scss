@@ -1,0 +1,107 @@
+@use '../../media' as *;
+
+.movies{
+
+    .movies__header{
+        width: 100vw;
+        min-height: 30vh;
+        max-height: 30vh;
+        overflow: hidden;
+        position: relative;
+
+        @include w1200 {
+            padding: 0 2rem;
+        }
+
+        .mask{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;height: 100%;
+            background-color: rgba(0, 0, 0, 0.384);
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translateY(-100px);
+        }
+
+        .movies__header__title{
+            font-size: 2rem;
+            font-weight: 700;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-transform: capitalize;
+        }
+    }
+
+    .movies__search{
+        background-color: rgba(0, 0, 0, 0.705);
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 1.4rem;
+        margin: 2rem 1rem 0;
+
+        .icon{
+            display: none;
+        }
+
+        @include smMobile{
+            .icon{
+                display: block;
+                font-size: 1.2rem;
+                transform: translateY(2px);
+            }
+
+            .text{
+                display: none;
+            }
+        }
+
+        input {
+            background: none;
+            outline: none;
+            border: none;
+            color: white;
+            width: 100%;
+            padding: 0 1rem;
+
+            &::placeholder{
+                text-transform: capitalize;
+                color: gray;
+            }
+        }
+
+        button{
+            background-color: var(--secondary-color);
+            padding: .4rem 1rem;
+            border-radius: 1.4rem;
+            border: none;
+            cursor: pointer;
+            color:rgb(0, 0, 0);
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            box-shadow: 0 0 5px var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include smMobile{
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .movies__wrapper{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+    }
+}

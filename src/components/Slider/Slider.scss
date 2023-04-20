@@ -1,0 +1,24 @@
+.slider{
+    padding: 1rem;
+    user-select: none;
+
+    .slider__title{
+        text-transform: uppercase;
+        font-weight:700;
+    }
+
+    .slider__wrapper{
+        display: grid;
+        grid-auto-flow: column;
+        gap: 1rem;
+        padding: .5rem 0;
+        height: 265px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior: contain;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+}

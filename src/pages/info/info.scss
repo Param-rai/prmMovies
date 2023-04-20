@@ -1,0 +1,159 @@
+@use '../../media' as *;
+
+
+.info{
+    
+    .info__bg{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .info__header{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.575);position: relative;
+        transition: inherit;
+
+        @include tablet {
+            height: 105vh;
+        }
+
+        @include w1200{
+            padding: 0 2rem;
+        }
+
+        @include h600{
+            height: 140vh;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 1rem;
+        }
+
+        .info__div{
+            display: flex;
+            gap: 1rem;
+    
+            .info__img{
+                width: 300px;
+                border-radius: .5rem;
+                overflow: hidden;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.575);
+                background-color: rgba(255, 255, 255, 0.26);
+                
+                img{
+                    max-width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                @media screen  and (max-width :1000px ){
+                    display: none;
+                }
+            }
+    
+            .info__details{
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+
+            @include tablet {
+                max-width: 500px;
+            }
+
+            @media screen and (max-width:520px){
+                max-width: 400px;
+            }
+
+            @media screen and (max-width:420px){
+                max-width: 300px;
+            }
+           }
+    
+           .info__title{
+            font-size: 3rem ;
+            font-weight: 700;
+           }
+    
+           .info__chips{
+            overflow: hidden;
+            overflow-x:auto;
+            user-select: none;
+            overscroll-behavior: contain;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            
+            .info__chip__slide{
+                display: flex;
+                gap: 1rem;
+
+                span{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid var(--color-white);
+                    border-radius: 2rem;
+                    padding: .3rem 1.1rem;
+                    cursor: pointer;
+                }
+            }
+    
+           
+        }
+        
+        
+           .info__casts{
+            display: flex;
+            gap: .5rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            overscroll-behavior: contain;
+    
+            &::-webkit-scrollbar{
+                display: none;
+            }
+    
+                .info__cast{
+                    .info__cast__img{
+                        width: 110px;
+                        height: 180px;
+                        background-color: rgba(255, 255, 255, 0.26);
+    
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+    
+                    .info__cast__name{
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                    }
+                }
+           }
+        }
+    }
+
+   .trailer{
+    background-color: rgba(128, 128, 128, 0.534);
+    height: 500px;
+    width: 80%;
+    margin: 3.5rem auto;
+    border-radius: .7rem;
+   }
+
+
+    
+}

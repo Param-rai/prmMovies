@@ -1,0 +1,54 @@
+.footer{
+    height:40vh;
+    width: 100%;
+
+    @media screen and (max-width:300px) {
+        height: 55vh;
+        margin-bottom: 6rem;
+    }
+
+    @media screen and (max-width:950px) {
+        height: 55vh;
+        margin-bottom: 4rem;
+    }
+
+
+    .logo{
+        margin: 1rem 0;
+    }
+
+    .footer__nav ul{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3,180px);
+        justify-content: center;
+        gap: 1rem;
+
+        li{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        @media screen and (max-width:600px) {
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @media screen and (max-width:300px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        min-width: 100vw;
+        background-color: rgba(0, 0, 0, 0.377);
+    }
+
+    
+
+}

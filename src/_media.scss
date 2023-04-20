@@ -1,0 +1,45 @@
+@mixin h500 {
+  @media screen and (max-height:500px) {
+      @content  
+    }
+}
+
+@mixin h600 {
+  @media screen and (max-height:600px) {
+      @content  
+    }
+}
+
+@mixin w900 {
+  @media screen and (max-width:950px) {
+      @content  
+    }
+}
+
+
+@mixin w1200 {
+  @media screen and (max-width:1200px) {
+      @content  
+    }
+}
+
+@mixin smMobile {
+  @media screen and (max-width:400px) {
+      @content  
+    }
+}
+
+
+
+@mixin tablet {
+  @media screen and (max-width:768px) {
+      @content  
+    }
+}
+
+@mixin smLaptop {
+    @media screen and (max-width:1080px) {
+        @content  
+      }
+}
+

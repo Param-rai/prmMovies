@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --primary-color: #111;
+  --secondary-color: #fcf02d;
+  --color-white: #fff;
+
+  --transition : all .4s ease-in-out;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  overflow-x: hidden;
+  transition: var(--transition);
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar{
+    width:0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+input {
+  color: var(--color-white);
+}
+
+.container{
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-4 {
+  margin-top: 4rem;
+}
+.mb-2 {
+  margin-top: 2rem;
+}
