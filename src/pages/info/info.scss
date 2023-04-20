@@ -57,8 +57,10 @@
             width: 600px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-end;
             gap: 1rem;
+            word-break: break-all;
+            overflow-x: hidden;
 
             @include tablet {
                 max-width: 500px;
@@ -76,6 +78,23 @@
            .info__title{
             font-size: 3rem ;
             font-weight: 700;
+
+            @include tablet {
+            font-size: 2rem ;
+            }
+
+            @include smMobile{
+            font-size: 1.5rem ;
+            }
+           }
+
+           .info__desc{
+            max-height: 200px;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
            }
     
            .info__chips{
