@@ -2,11 +2,7 @@
 
 .header {
     width: 100%;
-    height: 100vh;
-    
-    @include h600{
-        height: 110vh;
-    }
+    height: 720px;
     
 
     .wrapper {
@@ -39,8 +35,7 @@
             width: 100%;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
-
+            transform: translate(-50%,-50%)
         }
 
         .movie__name {
@@ -129,23 +124,12 @@
         }
 
         
-        @include h600{
-            max-width: 400px;
-            min-width: 400px;
-        }
 
         .card__movie {
             display: flex;
             align-items: flex-end;
             transition: var(--transition);
             animation: fade .4s ease-in-out;
-
-
-            @include h500{
-                &:nth-child(1){
-                    display: none;
-                }
-            }
 
             @keyframes fade {
                 0%{
