@@ -1,3 +1,9 @@
+@mixin h450 {
+  @media screen and (max-height:450px) {
+      @content  
+    }
+}
+
 @mixin h500 {
   @media screen and (max-height:500px) {
       @content  

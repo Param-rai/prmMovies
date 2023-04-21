@@ -52,6 +52,7 @@ const Movies = ({ bar }) => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     // set page one and start fetching from the first page again if switch page
     setQuery("");
     setResult(null);
@@ -68,7 +69,7 @@ const Movies = ({ bar }) => {
   }, [type]);
 
   return (
-    <div className="movies ">
+    <div className="movies">
       <div className="container">
         <Navbar type={type} bar={bar} />
       </div>

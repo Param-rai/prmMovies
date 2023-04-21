@@ -97,10 +97,10 @@
     }
 
     .movies__wrapper{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
         justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        padding: 2rem 0;
+        gap: .5rem;
+        padding: 2rem ;
     }
 }

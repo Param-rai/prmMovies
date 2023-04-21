@@ -5,7 +5,7 @@
     
     .info__bg{
       width: 100%;
-      height: 700px;
+      height: 100vh;
       position: absolute;
       top: 0;
       left: 0;
@@ -14,12 +14,24 @@
 
     .info__header{
         width: 100%;
-        height: 700px;
+        height: 100vh;
         background-color: rgba(0, 0, 0, 0.575);position: relative;
         transition: inherit;
         
         @include w1200{
-            padding: 0 2rem;
+        padding: 0 2rem;
+        }
+
+        @include h600{
+        height: 110vh;
+        }
+
+        @include h500{
+        height: 125vh;
+        }
+
+        @include h450{
+        height: 140vh;
         }
 
         .container{
@@ -59,7 +71,6 @@
             flex-direction: column;
             justify-content: flex-end;
             gap: 1rem;
-            word-break: break-all;
             overflow-x: hidden;
 
             @include tablet {
@@ -78,6 +89,7 @@
            .info__title{
             font-size: 3rem ;
             font-weight: 700;
+            word-break: break-all;
 
             @include tablet {
             font-size: 2rem ;
@@ -89,7 +101,7 @@
            }
 
            .info__desc{
-            max-height: 200px;
+            max-height: 170px;
             overflow-y: auto;
 
             &::-webkit-scrollbar{
@@ -116,7 +128,7 @@
                     align-items: center;
                     border: 1px solid var(--color-white);
                     border-radius: 2rem;
-                    padding: .3rem 1.1rem;
+                    padding: .2rem 1.1rem;
                     cursor: pointer;
                 }
             }

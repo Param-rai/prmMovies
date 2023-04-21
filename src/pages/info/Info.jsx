@@ -12,6 +12,7 @@ const Info = ({ bar }) => {
   const [info, setInfo] = useState({});
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     slide(".info__chips");
     slide(".info__casts");
 
@@ -23,6 +24,7 @@ const Info = ({ bar }) => {
     };
 
     fetchInfo();
+    // eslint-disable-next-line
   }, [category, id]);
 
   return (
@@ -34,9 +36,10 @@ const Info = ({ bar }) => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
+          height:`${window.height}px`
         }}
       ></div>
-      <div className="info__header">
+      <div className="info__header" style={{height:`${window.height}px`}}>
         <div className="container">
           <Navbar bar={bar} />
 

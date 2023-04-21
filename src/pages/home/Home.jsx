@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Slider from "../../components/Slider/Slider";
 import "./style.scss";
 
 const Home = ({ bar }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="home">
       <Header bar={bar} />
